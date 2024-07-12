@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Quản lý sản phẩm</h1>
+        <button class="logout-button">Đăng xuất</button>
+    </header>
+    
+    <main>
+        <button class="add-button" onclick="showAddProductForm()">Thêm sản phẩm</button>
+        
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>Ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Cấu hình</th>
+                    <th>Hãng sản xuất</th>
+                    <th>Giá</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="productTableBody">
+                <!-- Danh sách sản phẩm sẽ được thêm vào đây bằng JavaScript -->
+            </tbody>
+        </table>
+        
+        <div class="product-form-container" id="productFormContainer">
+            <h2 id="formTitle">Thêm sản phẩm</h2>
+            <form id="productForm" onsubmit="submitProductForm(event)">
+                <input type="hidden" id="productId">
+                <div class="form-group">
+                    <label for="productImage">Ảnh sản phẩm</label>
+                    <input type="file" id="productImage" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="productName">Tên sản phẩm</label>
+                    <input type="text" id="productName" required>
+                </div>
+                <div class="form-group">
+                    <label for="productSpecs">Cấu hình</label>
+                    <textarea id="productSpecs" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="productBrand">Hãng sản xuất</label>
+                    <input type="text" id="productBrand" required>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Giá</label>
+                    <input type="number" id="productPrice" required>
+                </div>
+                <button type="submit">Lưu</button>
+                <button type="button" onclick="hideProductForm()">Hủy</button>
+            </form>
+        </div>
+    </main>
+    
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LapTop Trần Lê</title>
+    <link rel="stylesheet" href="TrangChu.css">
+</head>
+<body>
+    <header class="header">
+        <img src="anh/logo.jpg" alt="Laptop Trần Lê">
+        <div class="search-bar">
+            <input type="text" placeholder="Nhập tên sản phẩm cần tìm...">
+        </div>
+        <button class="menu-button" onclick="toggleDropdown()">Danh mục</button>
+        <div class="contact">
+            <span>Hotline CSKH:</span>
+            <span>0898.143.789</span>
+        </div>
+        <div class="user-actions">
+            <button>Giỏ hàng</button>
+            <button onclick="window.location.href='Login/login.html'">Đăng nhập</button>
+        </div>
+    </header>
+    
+    <nav class="menu">
+        <a href="#">Văn phòng</a>
+        <a href="#">Gaming</a>
+        <a href="#">Đồ họa - Kỹ thuật</a>
+        <a href="#">Cao cấp - Sang trọng</a>
+        <a href="#">Mỏng nhẹ</a>
+        <a href="#">Sinh viên</a>
+        <a href="#">Cảm ứng</a>
+        <a href="#">Pin trâu</a>
+    </nav>
+
+    <div class="dropdown-menu" id="dropdownMenu">
+        <div class="dropdown-column">
+            <h4>Hãng sản xuất</h4>
+            <ul>
+                <li><a href="#">Dell</a></li>
+                <li><a href="#">HP</a></li>
+                <li><a href="#">ASUS</a></li>
+                <li><a href="#">Acer</a></li>
+                <li><a href="#">Surface</a></li>
+                <li><a href="#">MSI</a></li>
+                <li><a href="#">Lenovo</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="products">
+        <!-- Sản phẩm sẽ được hiển thị ở đây bằng JavaScript -->
+    </section>
+
+    <section class="load-more">
+        <button class="load-more-button">Xem thêm</button>
+    </section>
+
+    <script src="TrangChu.js"></script>
+</body>
+</html>
